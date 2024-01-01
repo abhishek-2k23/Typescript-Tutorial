@@ -53,3 +53,44 @@ const  s1 : Student = {
 
 //calling the function with  passing s1 
 newStudent(s1);
+
+
+//************ ReadOnly and ?: in TS */
+
+//we can use ReadOnly to make the variable non-mutable
+//we can use ? just before colon to make the variable optional
+
+type employee = {
+    readonly _id : string; //once id assigned it can't be changed
+    name : string;
+    salary : number;
+    prevJob ?: string; // this is option he may tell or he may not
+}
+
+//making the employee
+let e1: employee = {
+    _id : "1234daasd",
+    name : "Abhishek",
+    salary: 1234,
+    //not giving the prevJob details still not complaining because of (?:)
+}
+
+e1.name = "abhi"
+// e1._id = "12341ads" //can't be changed after assigning
+
+//To make a single type variable by combining other multiple types of variables
+type cardNumber = {
+    cardNumber : number;
+}
+type cardDate = {
+    cardDate : Date;
+}
+type cardHolderName = {
+    cardHolderName : string;
+}
+
+//final card 
+//& is used to add the details. (| is used to either add if have);
+type cardDetails = cardHolderName & cardNumber & cardDate & {cvv : number};
+
+export {};
