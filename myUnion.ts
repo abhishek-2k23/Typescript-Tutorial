@@ -64,4 +64,6 @@ let seatAllotment : 'asile' | 'middle' | 'right';
 
 //now the seat can be only the defined types
 seatAllotment = 'asile';
-seatAllotment = 'crew' //not allowed 
+// seatAllotment = 'crew' //not allowed 
+
+export {}

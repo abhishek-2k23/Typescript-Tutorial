@@ -1,5 +1,5 @@
 //Tuples are just arrays with more restrictions given by ts.
-//in tupes the order of the types also matters with the numbes of types
+//in tupes the order of the types also matters with the numbers of types
 
 //defining the tuple
 type user = [number, string];
@@ -9,7 +9,7 @@ type user = [number, string];
 //first should be number and second should be string.
 let newUser : user  = [1, "abc@gmail.com"];
 
-//but the tupes don't catch push function
+//but the tuples don't catch push function
 newUser.push("true")
 
 console.log(newUser);
